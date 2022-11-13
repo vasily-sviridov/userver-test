@@ -7,8 +7,10 @@
 
 namespace service_template {
 
-std::string SayHelloTo(std::string_view name);
+enum class UserType { kFirstTime, kKnown };
 
-void AppendHello(userver::components::ComponentList &component_list);
+std::string SayHelloTo(std::string_view name, UserType type);
 
-} // namespace service_template
+void AppendHello(userver::components::ComponentList& component_list);
+
+}  // namespace service_template
